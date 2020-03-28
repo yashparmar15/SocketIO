@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SocketIO Example</title>
+    <style>
+        #username{
+            width:50vw;
+        }
+        #send_username{
+            width:15vw;
+        }
+        p{
+            width:10vw;
+        }
+        #send_to_username{
+            width:65vw;
+        }   
+        #private_message{
+            width:60vw;
+        }
+        #send_private_message{
+            width:5vw;
+        }
+        #m{
+            display:inline;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <input type="text" id="username" placeholder="Your Username">
+    <button id="send_username">Send Username</button>
+    
+    <br>
+    <br>
+    <br>
+
+    <div id="m"><p>Send To:</p> <input type="text" id="send_to_username" placeholder=""></div>
+    <div id="m"><p>Message:</p> <input type="text" id="private_message" placeholder="Message"></div>
+    <button id="send_private_message">Send</button>
+    <div id="mssg"></div>
+    <script src="{{ url_for('static', filename='socket.io.js') }}"></script>
+    <script
+              src="http://code.jquery.com/jquery-3.2.1.min.js"
+              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
